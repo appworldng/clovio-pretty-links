@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Validate composer.json and composer.lock
+        run: composer validate
+
+      - name: Cache Composer packages
+        id: composer-cache
+        uses: actions/cache@v2
+        with:
+          path: vendor
+          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-php-
+
+      - name: Install dependencies
+        if: steps.composer-cache.outputs.cache-hit != 'true'
+        run: composer install --prefer-dist --no-progress --no-suggest
+
+      - name: Preparing to deploy
+        run: composer dump-autoload -o
+
+      - name: CI/CD deploy build
+        run: sudo apt-get install rsync
+
+        # - name: Deploying Plugin
+        # run: rsync -a ~/vendor/ perpelmn@46.250.221.23:~/home/perpelmn/staging.perpendo.no/wp-content/plugins/
+        # run: rsync --rsh="/usr/bin/sshpass -p "password" ssh -o StrictHostKeyChecking=no -l root" ~/vendor/ perpelmn@46.250.221.23:~/home/perpelmn/staging.perpendo.no/wp-content/plugins/
+
+    # - name: Run test suite
+    #   "test": "vendor/bin/phpunit"
+    #   run: composer run-script test
