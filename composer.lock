@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cbf1145be09b1d7f4f02f4f75599de15",
+    "content-hash": "468debf0f2d4b1d380aaf7d5341d629f",
     "packages": [
         {
             "name": "htmlburger/carbon-fields",
-            "version": "dev-development",
+            "version": "v3.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/htmlburger/carbon-fields.git",
-                "reference": "440d3c27228ff93ed8781ec2bcf7a7b849f24087"
+                "reference": "cd772f1c6c002207eed71f98a8c54ad9403d5644"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/440d3c27228ff93ed8781ec2bcf7a7b849f24087",
-                "reference": "440d3c27228ff93ed8781ec2bcf7a7b849f24087",
+                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/cd772f1c6c002207eed71f98a8c54ad9403d5644",
+                "reference": "cd772f1c6c002207eed71f98a8c54ad9403d5644",
                 "shasum": ""
             },
             "require": {
@@ -27,7 +27,6 @@
                 "mockery/mockery": "^0.9.7",
                 "phpunit/phpunit": "~4.8"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -144,15 +143,13 @@
                 "issues": "https://github.com/htmlburger/carbon-fields/issues",
                 "source": "https://github.com/htmlburger/carbon-fields"
             },
-            "time": "2020-11-12T14:23:46+00:00"
+            "time": "2020-11-05T17:10:48+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "htmlburger/carbon-fields": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
