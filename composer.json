@@ -1,0 +1,16 @@
+{
+    "name": "chigozieorunta/clovio-pretty-link",
+    "description": "Display list of Pretty links and prevent user with Author roles from gaining access to main Pretty links.",
+    "type": "wordpress-plugin",
+    "require": {
+        "htmlburger/carbon-fields": "9999999-dev"
+    },
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Chigozie Orunta",
+            "email": "chigozieorunta@yahoo.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
