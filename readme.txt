@@ -9,7 +9,7 @@ Stable tag: 0.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Display list of Pretty links and prevent user with Author roles from gaining access to main Pretty links.
+Displays list of Pretty links and prevents user with Author roles from gaining access to main Pretty links.
 
 == Description ==
 
